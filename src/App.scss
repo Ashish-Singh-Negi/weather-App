@@ -1,0 +1,124 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  > #searchContainer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    margin: 10px 0 300px 0;
+    > input {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background-color: black;
+      outline: none;
+    }
+    >button{
+      height: 40px;
+      width: 40px;
+      background-color: black;
+      border: none;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.container {
+  height: 300px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  > .currentWeather {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div {
+      display: flex;
+      flex-direction: column;
+      > h2 {
+        font-size: 1.7rem;
+      }
+    }
+    > p {
+      font-size: 1.2rem;
+      > span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  > .mainContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    > img {
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      margin-left: 10px;
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      @keyframes floating {
+        from {
+          transform: translate(0, 0px);
+        }
+        65% {
+          transform: translate(0, 5px);
+        }
+        to {
+          transform: translate(0, -0px);
+        }
+      }
+    }
+    > .temp {
+      > p {
+        display: flex;
+        font-size: 5rem;
+        > span {
+          box-sizing: border-box;
+          margin-top: 15px;
+          font-size: 1rem;
+        }
+      }
+    }
+    > .condition {
+      > p {
+        font-size: 1.6rem;
+      }
+      > span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  > .bottomContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    height: 100px;
+    > .lastData {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
